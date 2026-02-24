@@ -1,34 +1,56 @@
 <!doctype html>
 <html lang="en" data-theme="light">
-
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Job Application Tracker</title>
-
         <!-- Tailwind + daisyUI -->
-        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+            rel="stylesheet"
+            type="text/css" />
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet" />
         <style>
-        * {
-            font-family: "Inter", sans-serif;
-        }
-        </style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
     </head>
 
-    <body>
-
-        <header></header>
+    <body class="bg-[#F8FAFC]">
+        <header class="w-10/12 mx-auto space-y-10 mt-10">
+            <h1 class="text-3xl font-bold text-black-500">Job Application
+                Tracker</h1>
+            <div class="grid grid-cols-3 gap-5">
+                <div class="bg-[#F1F2F4] font-medium p-5">
+                    <p>Total</p>
+                    <p class="text-black font-bold text-2xl" id="total">0</p>
+                </div>
+                <div class="bg-[#F1F2F4] font-medium p-5">
+                    <p>Inerview</p>
+                    <p class="text-green-500 font-bold text-2xl"
+                        id="inerview">0</p>
+                </div>
+                <div class="bg-[#F1F2F4] font-medium p-5">
+                    <p>Rejected</p>
+                    <p class="text-red-500 font-bold text-2xl"
+                        id="rejected">0</p>
+                </div>
+            </div>
+            <hr class="border-gray-400/40" />
+        </header>
         <main></main>
         <footer></footer>
-
     </body>
-
 </html>
