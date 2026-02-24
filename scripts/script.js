@@ -26,6 +26,9 @@ function calculateCount() {
     rejectedCount.innerText = rejectedList.length;
     totalJobsText.innerText = totalCards;
 
+        if (totalCards === 0 && currentStatus === 'all-filter-btn') {
+        allCardSection.innerHTML = renderEmptyState();
+    }
 }
 
 calculateCount();
@@ -226,4 +229,19 @@ function renderRejected() {
 
         filterSection.appendChild(div);
     }
+}
+
+
+function renderEmptyState() {
+    return `
+        <div class="bg-white rounded-xl p-20 text-center space-y-5 shadow-sm">
+            <img src="./assets/jobs.png" class="mx-auto w-20 opacity-80" />
+            <h2 class="text-2xl font-bold text-[#002C5C]">
+                No jobs available
+            </h2>
+            <p class="text-gray-500">
+                Check back soon for new job opportunities
+            </p>
+        </div>
+    `;
 }
