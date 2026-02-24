@@ -134,3 +134,50 @@ mainContainer.addEventListener('click', function (event) {
     }
 
 });
+
+
+function renderInterview() {
+
+    filterSection.innerHTML = '';
+
+    if (interviewList.length === 0) {
+        filterSection.innerHTML = renderEmptyState();
+        return;
+    }
+
+    for (let job of interviewList) {
+
+        let div = document.createElement('div');
+        div.className = 'relative p-8 rounded-lg bg-[#F1F2F43] shadow-sm';
+
+        div.innerHTML = `
+            <button class="absolute rounded-full border border-base-300 top-4 right-4 px-4 py-2">
+                <i class="fa-regular fa-trash-can"></i>
+            </button>
+
+            <div class="space-y-6">
+                <div>
+                    <p class="company-name text-4xl font-semibold">${job.companyName}</p>
+                    <p class="job-title text-gray-500">${job.jobTitle}</p>
+                </div>
+
+                <div>
+                    <p class="job-meta text-gray-600">${job.jobMeta}</p>
+                </div>
+
+                <p class="job-status inline-block bg-green-100 p-2 rounded font-medium text-gray-700">
+                    ${job.status}
+                </p>
+
+                <p class="description text-gray-500">${job.description}</p>
+
+                <div class="flex gap-4">
+                    <button class="btn btn-outline btn-success font-bold">INTERVIEW</button>
+                    <button class="btn btn-outline btn-error font-bold">REJECTED</button>
+                </div>
+            </div>
+        `;
+
+        filterSection.appendChild(div);
+    }
+}
